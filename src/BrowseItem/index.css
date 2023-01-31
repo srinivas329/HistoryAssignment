@@ -1,0 +1,39 @@
+.item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  align-items: flex-start;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+.delete-icon {
+  display: flex;
+  align-self: flex-end;
+  text-align: end;
+  margin-left: auto;
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+}
+.date {
+  margin-right: 50px;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+  margin: 16px;
+}
+.title {
+  color: #475569;
+  font-weight: 700;
+  margin-right: 40px;
+}
+.domineUrl {
+  color: #64748b;
+  font-weight: 500;
+}
