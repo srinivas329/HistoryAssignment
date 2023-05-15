@@ -16,7 +16,12 @@ const BrowseItem = props => {
         <p className="title">{title}</p>
         <p className="domineUrl">{domainUrl}</p>
       </div>
-      <button onClick={onDeleteHistory} type="button" className="delete-icon">
+      <button
+        data-testid="delete"
+        onClick={onDeleteHistory}
+        type="button"
+        className="delete-icon"
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
           alt="delete"

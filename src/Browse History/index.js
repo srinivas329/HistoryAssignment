@@ -13,14 +13,16 @@ class BrowseHistory extends Component {
 
   onDeleteLine = id => {
     const {HistoryDetails} = this.state
-    const filteredData = HistoryDetails.filter(each => each.id !== id)
+    const {initialHistoryList} = HistoryDetails
+    console.log(initialHistoryList)
+    const filteredData = initialHistoryList.filter(each => each.id !== id)
 
     this.setState({HistoryDetails: filteredData})
   }
 
   render() {
     const {initialHistoryList} = this.props
-    const {searchInput} = this.state
+    const {searchInput, HistoryDetails} = this.state
     const searchResult = initialHistoryList.filter(each =>
       each.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
@@ -52,7 +54,7 @@ class BrowseHistory extends Component {
         </div>
         <div className="bottom-container">
           <ul className="card">
-            {searchResult.map(each => (
+            {initialHistoryList.map(each => (
               <BrowseItem
                 historyDetails={each}
                 key={each.id}
